@@ -18,5 +18,18 @@ window.Utils = {
                 }
             }
         }
+    },
+    randomColor: function(){
+        return {
+            r: this.randomNumber(0,255,true),
+            g: this.randomNumber(0,255,true),
+            b: this.randomNumber(0,255,true),
+            a: 1
+        }
+    },
+    toColorString: function(colorObj){
+        with(colorObj){
+            return "rgba(" + [r,g,b,a].join(',') + ")";
+        }
     }
 };

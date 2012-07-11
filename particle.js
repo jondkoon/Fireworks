@@ -3,7 +3,12 @@
     var defaults = {
         x: 10,
         y: 10,
-        color: "rgb(0,255,0)",
+        color: {
+            r: 255,
+            g: 0,
+            b: 0,
+            a: 1
+        },
         height: 4,
         width: 4,
         vx: 1,
@@ -18,7 +23,7 @@
 
     Particle.prototype = {
         draw: function(ctx){
-            ctx.fillStyle = this.color;
+            ctx.fillStyle = Utils.toColorString(this.color);
             var x = Math.round(this.x);
             var y = Math.round(this.y);
             ctx.fillRect(x,y,this.width,this.height);
