@@ -19,7 +19,7 @@
 
     Burst.random = function(x,y, particleCount){
         var burst = new Burst();
-        var color = Utils.randomColor();
+        var color = Color.random();
         for(var i = 0; i < particleCount; i++){
             burst.particles.push(Particle.random(x,y,color));
         }
