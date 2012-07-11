@@ -1,9 +1,6 @@
 (function(){
-    window.Particle = function(options){
-        $.extend(this,options);
-    }
 
-    Particle.prototype = {
+    var defaults = {
         x: 10,
         y: 10,
         color: "rgb(0,255,0)",
@@ -11,8 +8,15 @@
         width: 4,
         vx: 1,
         vy: 1,
-        mass: 1,
-        gravity: 9.8,
+        mass: 1
+    };
+    var gravity = 9.8;
+
+    window.Particle = function(options){
+        Utils.extend(this,defaults,options);
+    }
+
+    Particle.prototype = {
         draw: function(ctx){
             ctx.fillStyle = this.color;
             var x = Math.round(this.x);
@@ -28,7 +32,7 @@
             var dy = this.vy * seconds;
             this.x += dx;
             this.y += dy;
-            this.vy += this.gravity * this.mass * seconds;
+            this.vy += gravity * this.mass * seconds;
         }
     };
 

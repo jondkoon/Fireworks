@@ -1,4 +1,5 @@
 (function(){
+
     window.Burst = function(){
         this.particles = [];
     }
