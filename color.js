@@ -14,9 +14,9 @@
     };
 
     Color.random = function(alphaToo){
-        var r = Utils.randomNumber(0,255,true);
-        var g = Utils.randomNumber(0,255,true);
-        var b = Utils.randomNumber(0,255,true);
+        var r = Utils.randomNumber(150,255,true);
+        var g = Utils.randomNumber(150,255,true);
+        var b = Utils.randomNumber(150,255,true);
         var a = alphaToo ? Utils.randomNumber(0,255,true) : 1;
         return new Color(r,g,b,a);
     }

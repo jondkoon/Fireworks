@@ -76,7 +76,7 @@
             var margin = 30;
             var x = Utils.randomNumber(margin, width - margin);
             var y = Utils.randomNumber(margin, height - margin);
-            return Burst.random(x,y,100);
+            return Burst.random(x,y,200);
         }
 
     }
